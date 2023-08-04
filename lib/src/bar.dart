@@ -369,6 +369,7 @@ class ConvexAppBar extends StatefulWidget {
 class ConvexAppBarState extends State<ConvexAppBar>
     with TickerProviderStateMixin {
   int? _currentIndex;
+
   /// get index
   int? get currentIndex => _currentIndex;
   int _warpUnderwayCount = 0;
@@ -476,7 +477,7 @@ class ConvexAppBarState extends State<ConvexAppBar>
     if (widget.disableDefaultTabController == true) {
       return widget.controller;
     }
-    return widget.controller ?? DefaultTabController.maybeOf(context);
+    return widget.controller ?? DefaultTabController.of(context);
   }
 
   void _updateTabController() {
