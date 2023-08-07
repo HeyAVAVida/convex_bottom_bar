@@ -477,7 +477,7 @@ class ConvexAppBarState extends State<ConvexAppBar>
     if (widget.disableDefaultTabController == true) {
       return widget.controller;
     }
-    return widget.controller ?? DefaultTabController.of(context);
+    return widget.controller;
   }
 
   void _updateTabController() {
